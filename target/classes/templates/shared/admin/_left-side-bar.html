@@ -1,0 +1,75 @@
+<!-- aside -->
+<div id="aside" class="app-aside fade nav-dropdown black">
+    <!-- fluid app aside -->
+    <div class="navside dk" data-layout="column">
+        <div class="navbar no-radius">
+            <!-- brand -->
+            <a th:href="@{/}" class="navbar-brand">
+                <div data-ui-include="'/resources/images/logo.svg'"></div>
+                <img th:src="@{/resources/images/logo.png}" alt="." class="hide">
+                <span class="hidden-folded inline" th:text="#{usermanagement}"></span>
+            </a>
+            <!-- / brand -->
+        </div>
+        <div data-flex class="hide-scroll">
+            <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
+
+                <ul class="nav" data-ui-nav>
+                    <li class="nav-header hidden-folded">
+                        <span class="text-xs" th:text="#{main}"></span>
+                    </li>
+
+                    <li>
+                        <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                            <span class="nav-icon">
+                    <i class="ion-person"></i>
+                  </span>
+                            <span class="nav-text" th:text="#{create}"></span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a th:href="@{/admin/user-cu}" >
+                                    <span class="nav-text" th:text="#{createUser}"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a th:href="@{/admin/role-cu}">
+                                    <span class="nav-text" th:text="#{createRole}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                            <span class="nav-icon">
+                    <i class="ion-ios-grid-view"></i>
+                  </span>
+                            <span class="nav-text" th:text="#{tablelist}"></span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a th:href="@{/admin/user-list}" >
+                                    <span class="nav-text" th:text="#{userList}"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/admin/role-list}" >
+                                    <span class="nav-text" th:text="#{roleList}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- / -->

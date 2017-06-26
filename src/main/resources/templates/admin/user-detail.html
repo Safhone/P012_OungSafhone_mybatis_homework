@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/aside-layout">
+<body>
+<div layout:fragment="content">
+
+        <!-- ############ PAGE START-->
+        <div class="padding">
+            <div class="box">
+                <div class="box-header">
+                    <h2 th:text="#{userprofile}"></h2>
+                </div>
+                <div>
+                    <table class="table m-b-none" data-ui-jp="footable" data-filter="#filter">
+                        <tr>
+                            <td th:text="#{username}"></td>
+                            <td th:text="${USERSBYHASH.username}"></td>
+                        </tr>
+                        <tr>
+                            <td th:text="#{email}"></td>
+                            <td th:text="${USERSBYHASH.email}"></td>
+                        </tr>
+
+                        <tr>
+                            <td th:text="#{gender}"></td>
+                            <td th:text="${USERSBYHASH.gender}"></td>
+                        </tr>
+
+                        <tr>
+                            <td th:text="#{phonenumber}"></td>
+                            <td th:text="${USERSBYHASH.phoneNumber}"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ############ PAGE END-->
+
+    </div>
+</body>
+</html>

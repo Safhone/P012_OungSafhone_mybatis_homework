@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/aside-layout">
+<body>
+<div layout:fragment="content">
+
+  <!-- ############ PAGE START-->
+  <div class="padding">
+    <div class="box">
+      <div class="box-header">
+        <h2 th:text="#{users}"></h2>
+      </div>
+      <div>
+        <table class="table m-b-none" data-ui-jp="footable" data-filter="#filter" data-page-size="5">
+          <thead>
+          <tr>
+            <th th:text="#{id}"></th>
+            <th th:text="#{username}"></th>
+            <th th:text="#{email}"></th>
+            <th th:text="#{gender}"></th>
+            <th th:text="#{phonenumber}"></th>
+            <th th:text="#{status}"></th>
+            <th th:text="#{createddate}"></th>
+            <th th:text="#{action}"></th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="USER : ${USERS}">
+            <td th:text="${USER.id}"></td>
+            <td th:text="${USER.username}"></td>
+            <td th:text="${USER.email}"></td>
+            <td th:text="${USER.gender}"></td>
+            <td th:text="${USER.phoneNumber}"></td>
+            <td th:text="${USER.status}"></td>
+            <td th:text="${USER.createdDate}"></td>
+            <td>
+              <a th:href="@{user/{id}/delete(id=${USER.userHash})}" th:title="#{delete}" style="margin-right: 1px;">
+                <i class="ion-trash-a btn btn-danger btn-xs"></i>
+              </a>
+              <a th:href="@{user/{id}/update(id=${USER.userHash})}" th:title="#{update}" style="margin-right: 1px;">
+                <i class="ion-edit btn btn-warning btn-xs"></i>
+              </a>
+              <a th:href="@{user/{id}/detail(id=${USER.userHash})}" th:title="#{detail}">
+                <i class="ion-ios-eye btn btn-success btn-xs"></i>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ############ PAGE END-->
+
+</div>
+
+</body>
+</html>

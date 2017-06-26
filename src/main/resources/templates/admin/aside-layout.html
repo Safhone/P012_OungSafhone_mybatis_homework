@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE" th:text="#{usermanagement}"></title>
+    <style th:replace="@{/shared/admin/_style}"></style>
+</head>
+<body>
+    <div class="app" id="app">
+        <div th:replace="@{/shared/admin/_left-side-bar}"></div>
+
+        <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
+            <div th:replace="@{/shared/admin/_header}"></div>
+            <div th:replace="@{/shared/admin/_footer}"></div>
+
+            <div layout:fragment="content" class="app-body"></div>
+        </div>
+        <div th:replace="@{/shared/admin/_right-side-bar}"></div>
+
+        <script th:replace="@{/shared/admin/_script}"></script>
+    </div>
+</body>
+</html>

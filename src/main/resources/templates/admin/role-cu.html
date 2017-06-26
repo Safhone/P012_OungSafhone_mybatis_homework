@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/aside-layout">
+<body>
+<div layout:fragment="content">
+
+  <!-- ############ PAGE START-->
+  <div class="padding">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <form data-ui-jp="parsley">
+          <div class="box">
+            <div class="box-header">
+              <h2  th:text="#{createRole}"></h2>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label th:text="#{username}"></label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{admin}">Admin</label>
+                <input type="checkbox" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{editor}">Editor</label>
+                <input type="checkbox" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{contributor}">Contributor</label>
+                <input type="checkbox" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{hr}">Author</label>
+                <input type="checkbox" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{subscriber}">Subscriber</label>
+                <input type="checkbox" class="form-control" placeholder="XXX XXXX XXX" required>
+              </div>
+            </div>
+            <div class=" p-a text-right">
+              <button type="submit" class="btn info">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ############ PAGE END-->
+
+</div>
+</body>
+</html>

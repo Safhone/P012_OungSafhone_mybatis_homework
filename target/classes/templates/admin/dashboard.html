@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/aside-layout">
+<body>
+<div layout:fragment="content">
+    <div class="row-col">
+        <div class="col-lg b-r">
+            <div class="row no-gutter">
+                <div class="col-xs-6 col-sm-4 b-r b-b">
+                    <div class="padding">
+                        <div class="text-center">
+                            <b><p class="text-muted m-b-md" th:text="#{totalUser}"></p></b>
+                            <h2 class="text-center _600" th:text="${COUNTUSER}"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 b-r b-b">
+                    <div class="padding">
+                        <div class="text-center">
+                            <b><p class="text-muted m-b-md" th:text="#{totalMale}"></p></b>
+                            <h2 class="text-center _600" th:text="${COUNTMALE}"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 b-r b-b">
+                    <div class="padding">
+                        <div class="text-center">
+                            <b><p class="text-muted m-b-md" th:text="#{totalFemale}"></p></b>
+                            <h2 class="text-center _600" th:text="${COUNTFEMALE}"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

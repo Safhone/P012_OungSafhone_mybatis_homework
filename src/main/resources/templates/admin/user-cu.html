@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/aside-layout">
+<body>
+<div layout:fragment="content">
+
+  <!-- ############ PAGE START-->
+  <div class="padding">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <form th:action="@{/api/user/create}" method="post" th:object="${USER}" data-ui-jp="parsley">
+          <div class="box">
+            <div class="box-header">
+              <h2 th:text="#{createUser}"></h2>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label th:text="#{username}"></label>
+                <input type="text" th:field="*{username}" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{email}"></label>
+                <input type="text" th:field="*{email}" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label th:text="#{gender}"></label>
+                <select th:field="*{gender}" class="form-control">
+                  <option th:value="M">Male</option>
+                  <option th:value="F">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+              <label th:text="#{phonenumber}"></label>
+              <input type="date" th:field="*{phoneNumber}" class="form-control" required>
+            </div>
+            </div>
+            <div class=" p-a text-right">
+              <button type="submit" class="btn info" th:text="#{submit}"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ############ PAGE END-->
+
+</div>
+</body>
+</html>
